@@ -11,7 +11,6 @@ This is my Infrastructure Project for ICT171. It includes:
 - GitHub version control
 - Scripts and documentation
 
-<<<<<<< HEAD
   ## Project Timeline
 
 - **Week 1:** EC2 setup and domain configuration
