@@ -15,9 +15,9 @@ This is my Infrastructure Project for ICT171. It includes:
 
 ## Project Timeline
 
-- **Week 1:** EC2 setup and domain configuration
-- **Week 2:** Installed WordPress
-- **Week 3:** Set up VPN 
+- **Week 1:** EC2 setup and domain configuration, Website implementation
+- **Week 2:** Installed WordPress, SSL/TLS Certbot, Elastic IP
+- **Week 3:** Set up VPN,
 - **Week 4:** Enabled HTTPS, added GitHub commits, wrote documentation
 
 ## Files
