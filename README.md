@@ -33,7 +33,7 @@ This is my Infrastructure Project for ICT171. It includes:
 
 ## Video Link
 
-- youtube.com
+- https://www.loom.com/share/4e35b16c89e64f54848152922fd391b4?sid=c2e764f1-9f4e-4421-8fe9-fffb7a691c41
 
 ## Domaine and IP
 
