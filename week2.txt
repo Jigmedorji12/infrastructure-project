@@ -1,1 +1,37 @@
-Week 2 - WordPress and Drupal
+Week 2 - WordPress 
+
+1. Install WordPress on EC2 (Short Steps)
+Connect to EC2:
+ssh -i "Ass1.pem" ubuntu@your-ec2-address
+2. Install Software:
+sudo apt update
+sudo apt install apache2 php libapache2-mod-php php-mysql mysql-server unzip wget -y
+3. Download WordPress
+cd /tmp
+wget https://wordpress.org/latest.zip
+unzip latest.zip
+ sudo mv wordpress /var/www/html/blog
+4. Set Permissions
+sudo chown -R www-data:www-data /var/www/html/blog
+sudo chmod -R 755 /var/www/html/blog
+5. Create MySQL Database
+CREATE DATABASE wordpress_blog;
+CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'StrongPass123!';
+GRANT ALL PRIVILEGES ON wordpress_blog.* TO 'wpuser'@'localhost';
+FLUSH PRIVILEGES;
+
+6. Restart Apache:
+sudo systemctl restart apache2
+7. Run WordPress Setup in Browser
+https://www.jigmeboxinglist.click/blog/
+Fill in DB name wordpress_blog, user wpuser, password StrongPass123!
+ 
+8. After Setup – Customize Your Blog
+Login to Admin Panel
+https://www.jigmeboxinglist.click/blog/wp-admin
+9. You can create the Blog post
+ 
+
+
+
+
