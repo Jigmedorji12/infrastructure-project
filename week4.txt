@@ -30,3 +30,28 @@ This is my Infrastructure Project for ICT171. It includes:
 - **Week 4:** Added GitHub commits, wrote documentation
 
 
+Script
+Purpose: Checks server disk usage and logs warning if usage exceeds 80%
+On the command line go:
+Cd ~
+nano disk_check.sh
+enter: 
+#!/bin/bash
+# Log the current date
+date >> /var/log/disk_check.log
+# Check disk usage
+USAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+# Log status
+if [ "$USAGE" -gt 80 ]; then
+  echo "WARNING: Disk usage is at ${USAGE}%!" >> /var/log/disk_check.log
+else
+  echo "Disk usage is normal: ${USAGE}%" >> /var/log/disk_check.log
+fi
+ 
+This Monitors your server’s root disk space. Logs a warning message if usage exceeds 80%.
+Run this command line: 
+crontab -e
+Add this line to check every hour:
+0 * * * * /bin/bash /path/to/disk-check.sh
+This Runs every hour and logs disk space info. Helps catch low storage issues before they cause problems.
+
