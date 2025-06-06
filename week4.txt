@@ -1,1 +1,15 @@
 Week 4 - Final Setup
+
+Step-by-Step: Finalize Repository Creation
+Repository Name: chose infrastructure-project 
+Visibility: Keep it Public 
+README: Tick "Add a README file"
+You need this so you can add your name and student ID right away.
+click the green "Create repository" button at the bottom right.
+
+Once your repo is created:
+Click on the README.md file inside your GitHub repo.
+Click the (pencil icon) to edit it.
+Paste this (replace details):
+
+
