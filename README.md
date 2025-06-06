@@ -34,8 +34,11 @@ This is my Infrastructure Project for ICT171. It includes:
 ## Domaine and IP
 
 - https://www.jigmeboxinglist.click/
+- https://www.jigmeboxinglist.click/blog/
 - 13.210.41.42
-
+  
+## Script
+- 
 
   
 
