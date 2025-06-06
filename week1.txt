@@ -1,4 +1,4 @@
-Week 1 - EC2 and DNS
+Week 1 - EC2 setup and domain configuration, Website implementation
 
 Server Setup step (Amazon EC2, Ubuntu)
 1. Launch a New EC2 Instance
@@ -37,3 +37,13 @@ Domaine Name and DNS (Route 53)
 5. Proceed to check out and fill in your information and once it is done wait 10-20 minutes to show up on the register domains section
 6.  On the left section, select hosted zones, click on your new domains and click on view details, once your in click on create records.
 7. Under record name use “www”, under value type in your website public ip address, make sure it a A type record, you can keep the rest on default and click. Create.
+
+Website Implementation 
+1.  on the command link go:
+ssh -i your-key.pem ubuntu@13.210.41.42
+2. once you are in your web server
+3. to modify your website enter this command line:
+Sudo nano /var/www/html/index.html and copy your HTML/CSS script into it
+ 
+ 
+
