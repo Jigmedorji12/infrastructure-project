@@ -22,14 +22,18 @@ This is my Infrastructure Project for ICT171. It includes:
 
 ## Files
 
-- test.html
-- 
-- 
-- 
+- README.md
+- week1.txt
+- week2.txt
+- week3.txt
+- week4.txt
+- index.html
+- Documentation
+- script.html
 
 ## Video Link
 
-- test.html
+- youtube.com
 
 ## Domaine and IP
 
