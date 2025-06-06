@@ -41,15 +41,22 @@ This is my Infrastructure Project for ICT171. It includes:
 - https://www.jigmeboxinglist.click/blog/
 - 13.210.41.42
   
-## Backup Script (wp-backup.sh)
+### Bash Script: disk_check.sh
 
-I created a custom Bash script that backs up both the WordPress site files and the MySQL database. It compresses the backups and logs the process. This script is scheduled via `cron` for daily automatic backups.
+**Purpose:**  
+This script monitors the root disk usage of the EC2 server. If usage exceeds 80%, it logs a warning to `/var/log/disk_check.log`.
 
-### Features:
-- Compresses WordPress site folder
-- Dumps and compresses MySQL database
-- Logs all output with timestamps
-- Easy to modify and reuse
+**Features:**
+- Automatically logs disk status with timestamp
+- Logs warnings when usage is high
+- Helps prevent downtime caused by full storage
+
+**Usage:**
+- Script saved as `disk_check.sh`
+- Made executable with `chmod +x`
+- Scheduled using cron to run hourly:
+  
+
 
   
 
