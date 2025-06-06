@@ -7,8 +7,8 @@
 
 ## Project Summary
 This is my Infrastructure Project for ICT171. It includes:
-- EC2 website hosting (WordPress & Drupal)
-- VPN and TeamSpeak server
+- EC2 website hosting (WordPress)
+- VPN 
 - SSL/TLS for HTTPS
 - GitHub version control
 - Scripts and documentation
@@ -16,8 +16,8 @@ This is my Infrastructure Project for ICT171. It includes:
 ## Project Timeline
 
 - **Week 1:** EC2 setup and domain configuration
-- **Week 2:** Installed WordPress and Drupal
-- **Week 3:** Set up VPN and TeamSpeak
+- **Week 2:** Installed WordPress
+- **Week 3:** Set up VPN 
 - **Week 4:** Enabled HTTPS, added GitHub commits, wrote documentation
 
 ## Files
