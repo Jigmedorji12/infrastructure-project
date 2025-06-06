@@ -1,4 +1,22 @@
-Week 2 - WordPress 
+Week 2 - WordPress, SSL/TLS Certbot, Elastic IP
+
+SSL/TLS Certbot
+1. Install Certbot, on the command link enter:
+ssh -i your-key.pem ubuntu@13.210.41.42
+sudo apt update
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+Check your website it should now be secure and your domain working
+ 
+
+ELASTIC IP
+1. ON the EC2 section under network and security click on elastic Ips
+2. select Allocate Elastic IP address, you can leave the rest defaults then click allocate
+3. once it been made select the elastic IP you made
+4. click on action and select associated elastic IP address
+5. choose the your web server on the instance and select the private IP address 
+
+
 
 1. Install WordPress on EC2 (Short Steps)
 Connect to EC2:
@@ -30,6 +48,8 @@ Fill in DB name wordpress_blog, user wpuser, password StrongPass123!
 Login to Admin Panel
 https://www.jigmeboxinglist.click/blog/wp-admin
 9. You can create the Blog post
+
+
  
 
 
