@@ -41,7 +41,7 @@ This is my Infrastructure Project for ICT171. It includes:
 - https://www.jigmeboxinglist.click/blog/
 - 13.210.41.42
   
-### Bash Script: disk_check.sh
+## Disk_check.sh
 
 **Purpose:**  
 This script monitors the root disk usage of the EC2 server. If usage exceeds 80%, it logs a warning to `/var/log/disk_check.log`.
