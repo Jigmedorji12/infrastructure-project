@@ -47,14 +47,11 @@ This is my Infrastructure Project for ICT171. It includes:
 This script monitors the root disk usage of the EC2 server. If usage exceeds 80%, it logs a warning to `/var/log/disk_check.log`.
 
 **Features:**
-- Automatically logs disk status with timestamp
-- Logs warnings when usage is high
-- Helps prevent downtime caused by full storage
+- Logs current date and disk usage
+- Alerts if usage exceeds 80%
+- logs are saved to ~/disk_check.log for user-friendly access
+- Can be automated using cron to run hourly or daily
 
-**Usage:**
-- Script saved as `disk_check.sh`
-- Made executable with `chmod +x`
-- Scheduled using cron to run hourly:
   
 
 
