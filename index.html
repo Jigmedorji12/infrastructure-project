@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top 10 Greatest Boxers of All Time</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #b30000;
+      color: #fff;
+      padding: 20px 0 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header #clock {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #800000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+    nav button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    nav button:hover, nav button.active {
+      background: #b30000;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h2 {
+      margin-top: 0;
+      color: #b30000;
+    }
+
+    .card-content p {
+      margin: 5px 0;
+    }
+
+    .quote {
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+      border-left: 3px solid #b30000;
+      padding-left: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    /* About & Contact content styling */
+    #about, #contact {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    #about h2, #contact h2 {
+      color: #b30000;
+      margin-top: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    form label {
+      font-weight: bold;
+    }
+    form input, form textarea {
+      padding: 8px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+    form button {
+      background: #b30000;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #800000;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Top 10 Greatest Boxers of All Time</h1>
+  <div id="clock"></div>
+  <p>Ranked by skill, records, influence, and global legacy.</p>
+</header>
+
+<nav>
+  <button id="nav-home" class="active" onclick="showPage('home')">Home</button>
+  <button id="nav-about" onclick="showPage('about')">About</button>
+  <button id="nav-contact" onclick="showPage('contact')">Contact</button>
+</nav>
+
+<!-- Home page (default visible) -->
+<div id="home" class="page">
+  <div class="container">
+
+    <!-- Muhammad Ali -->
+    <div class="card">
+      <img src="https://i.etsystatic.com/19535642/r/il/c3691b/1924573871/il_1140xN.1924573871_rxs9.jpg" alt="Muhammad Ali">
+      <div class="card-content">
+        <h2>1. Muhammad Ali</h2>
+        <p><strong>DOB:</strong> Jan 17, 1942</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 56W - 5L</p>
+        <p><strong>Titles:</strong> 3x World Heavyweight Champion</p>
+        <p class="quote">“Float like a butterfly, sting like a bee.”</p>
+      </div>
+    </div>
+
+    <!-- Mike Tyson -->
+    <div class="card">
+      <img src="https://gravity.fitness/cdn/shop/articles/Are_you_as_calisthenics_fit_as_peak_Mike_Tyson.jpg?v=1704805412&width=1200" alt="Mike Tyson">
+      <div class="card-content">
+        <h2>2. Mike Tyson</h2>
+        <p><strong>DOB:</strong> Jun 30, 1966</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 50W - 6L</p>
+        <p><strong>Titles:</strong> Undisputed Heavyweight Champion</p>
+        <p class="quote">“Everyone has a plan until they get punched in the mouth.”</p>
+      </div>
+    </div>
+
+    <!-- Sugar Ray Robinson -->
+    <div class="card">
+      <img src="https://cdn.britannica.com/47/26147-050-FA7B2E9D/Sugar-Ray-Robinson-left-eye-rematch-world-Sept-23-1957.jpg" alt="Sugar Ray Robinson">
+      <div class="card-content">
+        <h2>3. Sugar Ray Robinson</h2>
+        <p><strong>DOB:</strong> May 3, 1921</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 174W - 19L</p>
+        <p><strong>Titles:</strong> Welterweight & Middleweight Champion</p>
+        <p class="quote">“Boxing is a lot of white men watching two black men beat each other up.”</p>
+      </div>
+    </div>
+
+    <!-- Floyd Mayweather Jr. -->
+    <div class="card">
+      <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2023/04/09/16810589883046.jpg" alt="Floyd Mayweather Jr.">
+      <div class="card-content">
+        <h2>4. Floyd Mayweather Jr.</h2>
+        <p><strong>DOB:</strong> Feb 24, 1977</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 50W - 0L</p>
+        <p><strong>Titles:</strong> 5-division World Champion</p>
+        <p class="quote">“Hard work, dedication, and discipline lead to success.”</p>
+      </div>
+    </div>
+
+    <!-- Manny Pacquiao -->
+    <div class="card">
+      <img src="https://dims.apnews.com/dims4/default/eb112f5/2147483647/strip/false/crop/3000x2000+0+0/resize/1486x991!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F89%2F81%2F77ecd2c47e6364170ccc439f1480%2F19d81f6ab70e4123ac854c1796799f36" alt="Manny Pacquiao">
+      <div class="card-content">
+        <h2>5. Manny Pacquiao</h2>
+        <p><strong>DOB:</strong> Dec 17, 1978</p>
+        <p><strong>Nationality:</strong> Philippines</p>
+        <p><strong>Record:</strong> 62W - 8L</p>
+        <p><strong>Titles:</strong> 8-division World Champion</p>
+        <p class="quote">“The fight is won or lost far away from witnesses—behind the lines, in the gym.”</p>
+      </div>
+    </div>
+
+    <!-- Roberto Durán -->
+    <div class="card">
+      <img src="https://www.wbaboxing.com/wp-content/uploads/2016/08/Hands-of-Stone-Edgar-Ramirez-as-Roberto-Duran2.jpg">
+      <div class="card-content">
+        <h2>6. Roberto Durán</h2>
+        <p><strong>DOB:</strong> Jun 16, 1951</p>
+        <p><strong>Nationality:</strong> Panama</p>
+        <p><strong>Record:</strong> 103W - 16L</p>
+        <p><strong>Titles:</strong> 4-weight division champion</p>
+        <p class="quote">“I don't count my sit-ups; I only start counting when it starts hurting.”</p>
+      </div>
+    </div>
+
+    <!-- Joe Louis -->
+    <div class="card">
+      <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7151dd62-4289-4759-8761-90230ab564b8_1440x907.jpeg">
+      <div class="card-content">
+        <h2>7. Joe Louis</h2>
+        <p><strong>DOB:</strong> May 13, 1914</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 66W - 3L</p>
+        <p><strong>Titles:</strong> Longest-reigning HW Champion</p>
+        <p class="quote">“He can run, but he can't hide.”</p>
+      </div>
+    </div>
+
+    <!-- Sugar Ray Leonard -->
+    <div class="card">
+      <img src="https://cdn.britannica.com/01/258701-050-E0171D7F/Sugar-Ray-Leonard-and-Martin-Hagler-battle-for-WBC-and-Ring-Middleweight-titles-April-6-1987-Leonard-wins-on-split-decision.jpg">
+      <div class="card-content">
+        <h2>8. Sugar Ray Leonard</h2>
+        <p><strong>DOB:</strong> May 17, 1956</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 36W - 3L</p>
+        <p><strong>Titles:</strong> 5-division World Champion</p>
+        <p class="quote">“Strong mindset will take you anywhere in Life”</p>
+      </div>
+    </div>
+
+    <!-- Thomas Hearns -->
+    <div class="card">
+      <img src="https://boxingnewsonline.net/wp-content/uploads/ThomasHearns.jpg">
+      <div class="card-content">
+        <h2>9. Thomas Hearns</h2>
+        <p><strong>DOB:</strong> Oct 18, 1958</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 61W - 5L</p>
+        <p><strong>Titles:</strong> 6-weight division champion</p>
+        <p class="quote">“Power and speed will win fights.”</p>
+      </div>
+    </div>
+
+    <!-- Evander Holyfield -->
+    <div class="card">
+      <img src="https://www.pjstar.com/gcdn/authoring/2016/12/06/NJOS/ghows-IP-430345d9-127e-4f77-e053-0100007f3f82-af3c1133.jpeg">
+      <div class="card-content">
+        <h2>10. Evander Holyfield</h2>
+        <p><strong>DOB:</strong> Oct 19, 1962</p>
+        <p><strong>Nationality:</strong> USA</p>
+        <p><strong>Record:</strong> 44W - 10L</p>
+        <p><strong>Titles:</strong> Undisputed Cruiserweight & HW Champ</p>
+        <p class="quote">“The only thing more powerful than a fist is the heart behind it.”</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- About page -->
+<div id="about" class="page">
+  <h2>About This Project</h2>
+<p>This project is part of my ICT171 Infrastructure assignment. I built this website using AWS EC2, HTML, CSS, and JavaScript. It is also integrated with WordPress and other cloud tools including Route 53 for DNS and HTTPS for secure access.</p>
+<p>The purpose of this website is to highlight the 10 greatest boxers in history, based on skill, record, impact, and legacy. Each profile includes their key achievements and famous quotes. This site is a tribute to boxing legends and serves as a showcase for web development skills including hosting, scripting, and content management systems.</p>
+</div>
+
+<!-- Contact page -->
+<div id="contact" class="page">
+  <h2>Contact Us</h2>
+  <form id="contactForm" onsubmit="handleSubmit(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required />
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+    
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+
+<script>
+  // Navigation page switcher
+  function showPage(pageId) {
+    // Hide all pages
+    document.querySelectorAll('.page').forEach(page => {
+      page.style.display = 'none';
+    });
+    // Remove active class from all nav buttons
+    document.querySelectorAll('nav button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    // Show the requested page
+    document.getElementById(pageId).style.display = 'block';
+    // Add active class to the current button
+    document.getElementById('nav-' + pageId).classList.add('active');
+  }
+
+  // Show home page by default
+  showPage('home');
+
+  // Simple live clock
+  function updateClock() {
+    const clock = document.getElementById('clock');
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString();
+    clock.textContent = timeStr;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  // Handle contact form submit
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert('Thank you for contacting us, ' + document.getElementById('name').value + '!');
+    document.getElementById('contactForm').reset();
+  }
+</script>
+<footer style="text-align:center; margin-top: 50px; padding: 20px; background-color: #111; color: #eee;">
+  <p><a href="https://www.jigmeboxinglist.click/blog/" style="color: #eee;">Visit the Blog</a></p>
+  <p>@Top10Boxers | Student Number: 34836458</p>
+  <p>
+    Licensing: Written content licensed under 
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color: #eee;">
+      CC BY 4.0
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
