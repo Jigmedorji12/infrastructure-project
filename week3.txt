@@ -1,1 +1,38 @@
 Week 3 - VPN 
+
+1. Update & Install Packages:
+sudo apt update && sudo apt upgrade -y
+sudo apt install openvpn easy-rsa -y
+2. Set Up Easy-RSA PKI
+make-cadir ~/openvpn-ca
+cd ~/openvpn-ca
+nano vars  # Edit values: country, city, org
+3. Build CA & Server Certificates
+./easyrsa init-pki
+./easyrsa build-ca
+./easyrsa gen-req server nopass
+./easyrsa sign-req server server
+./easyrsa gen-dh
+openvpn --genkey --secret ta.key
+4. Create Client Certificate
+./easyrsa gen-req jigme-client nopass
+./easyrsa sign-req client jigme-client
+5. Configure Server
+sudo gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz | sudo tee /etc/openvpn/server.conf
+sudo nano /etc/openvpn/server.conf
+# Make sure these lines are enabled:
+# tls-auth, cipher, auth, user nobody, group nogroup
+6. Copy Certs & Keys to OpenVPN
+sudo cp ~/openvpn-ca/pki/ca.crt /etc/openvpn/
+sudo cp ~/openvpn-ca/pki/issued/server.crt /etc/openvpn/
+sudo cp ~/openvpn-ca/pki/private/server.key /etc/openvpn/
+sudo cp ~/openvpn-ca/pki/dh.pem /etc/openvpn/
+sudo cp ~/openvpn-ca/ta.key /etc/openvpn/
+7. Enable IP Forwarding
+sudo nano /etc/sysctl.conf
+# Un-comment: net.ipv4.ip_forward=1
+sudo sysctl -p
+9. Start OpenVPN
+sudo systemctl start openvpn@server
+sudo systemctl enable openvpn@server
+sudo systemctl status openvpn@server
