@@ -29,7 +29,7 @@ This is my Infrastructure Project for ICT171. It includes:
 - week4.txt (GitHub commits and Documentation)
 - index.html (Website html)
 - Documentation (Step by Step)
-- script.html 
+- disk_check.sh
 
 ## Video Link
 
