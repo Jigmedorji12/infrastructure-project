@@ -23,13 +23,13 @@ This is my Infrastructure Project for ICT171. It includes:
 ## Files
 
 - README.md
-- week1.txt
-- week2.txt
-- week3.txt
-- week4.txt
-- index.html
-- Documentation
-- script.html
+- week1.txt (EC2 setup, domain config, Website)
+- week2.txt (Wordpress, SSL/TLS certbot, Elastic IP)
+- week3.txt (VPN Server)
+- week4.txt (GitHub commits and Documentation)
+- index.html (Website html)
+- Documentation (Step by Step)
+- script.html 
 
 ## Video Link
 
