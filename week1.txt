@@ -1,1 +1,39 @@
 Week 1 - EC2 and DNS
+
+Server Setup step (Amazon EC2, Ubuntu)
+1. Launch a New EC2 Instance
+Go to the AWS EC2 Dashboard and click "Launch Instance". Choose Ubuntu 20.04 LTS and make sure it's Free Tier Eligible.
+2. Choose Instance Type
+Select the default t2.micro instance type (free tier eligible), then click Next.
+3. Configure Instance & Storage
+Leave the instance settings as default.
+On the Add Storage step, accept the default 8GB — that’s enough for basic use.
+4. Skip Tags and Set Up Security Group
+Skip the "Add Tags" section.
+In Configure Security Group:
+•	Name it: ssh-and-web
+•	Keep the default SSH rule.
+•	Click "Add Rule", choose HTTP, and leave source as Anywhere (0.0.0.0/0) to allow web traffic.
+5. Review and Launch
+Review your settings. AWS may warn that the server is open to the world — this is fine for a public website.
+Click Launch.
+6. Create Key Pair and Final Launch
+When prompted, create a new key pair (e.g., webserver-key).
+Download the .pem file and keep it safe — you’ll need it to access your server.
+Click Launch Instance, then View Instance to monitor its status.
+ 
+7.  Go onto your command line like terminal and enter: ssh -i "yourkeyname.pem" ubuntu@ec2-12-123-1-35.ap-southwest-5.compute.amazonaws.com
+ 
+8.  You then Install Apache by entering this command: 
+Sudo Apt update
+Sudo apt install apache2
+9. Test this by visiting your webserver by entering your IP into the web browser
+Domaine Name and DNS (Route 53)
+1.  On the AWS console search up Route 53
+2.  On the left side go on domains section and click on registered domains
+3.  Once you are in, click on register domains
+4. Enter a domain name that suits your topic (use .click for the cheapest domain) and select the domain
+ 
+5. Proceed to check out and fill in your information and once it is done wait 10-20 minutes to show up on the register domains section
+6.  On the left section, select hosted zones, click on your new domains and click on view details, once your in click on create records.
+7. Under record name use “www”, under value type in your website public ip address, make sure it a A type record, you can keep the rest on default and click. Create.
