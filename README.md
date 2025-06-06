@@ -41,8 +41,15 @@ This is my Infrastructure Project for ICT171. It includes:
 - https://www.jigmeboxinglist.click/blog/
 - 13.210.41.42
   
-## Script
-- 
+## Backup Script (wp-backup.sh)
+
+I created a custom Bash script that backs up both the WordPress site files and the MySQL database. It compresses the backups and logs the process. This script is scheduled via `cron` for daily automatic backups.
+
+### Features:
+- Compresses WordPress site folder
+- Dumps and compresses MySQL database
+- Logs all output with timestamps
+- Easy to modify and reuse
 
   
 
